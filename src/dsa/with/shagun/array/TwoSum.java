@@ -26,6 +26,10 @@ public class TwoSum {
             if (map.containsKey(target - nums[i])) {
                 return new int[]{map.get(target - nums[i]), i};
             }
+            //the code lines below avoids the "duplicate keys" problem
+            if(map.containsKey(nums[i])) {
+                continue;
+            }
             map.put(nums[i], i);
         }
         return new int[]{0, 0};
