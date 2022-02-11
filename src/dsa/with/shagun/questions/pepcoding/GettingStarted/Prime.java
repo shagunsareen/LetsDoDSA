@@ -1,4 +1,4 @@
-package dsa.with.shagun.questions.pepcoding;
+package dsa.with.shagun.questions.pepcoding.GettingStarted;
 
 import java.util.Scanner;
 

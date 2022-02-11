@@ -1,4 +1,4 @@
-package dsa.with.shagun.questions.pepcoding;
+package dsa.with.shagun.questions.pepcoding.GettingStarted;
 
 public class PrintZ {
     public static void main(String[] args) {
