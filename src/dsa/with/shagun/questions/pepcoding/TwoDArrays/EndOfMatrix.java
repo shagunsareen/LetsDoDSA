@@ -20,39 +20,32 @@ public class EndOfMatrix {
         int c = 0;
 
         while (true) {
-            dir = dir + arr[r][c];
+            dir = (dir + arr[r][c]) % 4;
             if (dir == 0) {
                 c++;
-            }
-            if (dir == 1) {
+            } else if (dir == 1) {
                 r++;
-            }
-            if (dir == 2) {
+            } else if (dir == 2) {
                 c--;
-            }
-            if (dir == 3) {
+            } else if (dir == 3) {
                 r--;
             }
 
             if (c < 0) {
                 c++;
                 break;
-            }
-            if (r < 0) {
+            } else if (r < 0) {
                 r++;
                 break;
-            }
-            if (c > arr[0].length) {
+            } else if (c > arr[0].length -1) {
                 c--;
                 break;
-            }
-            if (r > arr.length) {
+            } else if (r > arr.length-1) {
                 r--;
                 break;
             }
         }
         System.out.println(r);
         System.out.println(c);
-
     }
 }
