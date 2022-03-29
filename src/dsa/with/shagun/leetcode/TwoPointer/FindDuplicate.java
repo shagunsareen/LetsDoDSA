@@ -1,7 +1,7 @@
 package dsa.with.shagun.leetcode.TwoPointer;
 
 public class FindDuplicate {
-    public int findDuplicate(int[] nums) {
+    public int findDuplicate(int[] nums) { //TC: O(n)  SC :O(1)
         // Find the intersection point of the two runners.
         int tortoise = nums[0];
         int hare = nums[0];
