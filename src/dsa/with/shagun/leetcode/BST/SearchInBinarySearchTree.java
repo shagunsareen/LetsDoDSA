@@ -16,21 +16,3 @@ public class SearchInBinarySearchTree {  //TC : O(logN) because we are traversin
     }
 }
 
-class TreeNode {
-    int value;
-    dsa.with.shagun.leetcode.BST.TreeNode left;
-    dsa.with.shagun.leetcode.BST.TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.value = val;
-    }
-
-    TreeNode(int val, dsa.with.shagun.leetcode.BST.TreeNode left, dsa.with.shagun.leetcode.BST.TreeNode right) {
-        this.value = val;
-        this.left = left;
-        this.right = right;
-    }
-}
