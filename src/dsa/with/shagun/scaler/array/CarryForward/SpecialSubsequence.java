@@ -32,8 +32,9 @@ public class SpecialSubsequence {
             TC: O(N), SC: O(1)
          */
 
-        int countOfA = 0;
-        int countOfSubseq = 0;
+        long countOfA = 0;
+        long countOfSubseq = 0;
+        int mod = 1000*1000*1000 +7;
         char[] arr = A.toCharArray();
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] == 'A'){
@@ -43,6 +44,6 @@ public class SpecialSubsequence {
                 countOfSubseq = countOfSubseq + countOfA;
             }
         }
-        return countOfSubseq;
+        return (int)(countOfSubseq%mod);
     }
 }
