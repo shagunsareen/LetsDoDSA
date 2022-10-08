@@ -6,7 +6,7 @@ public class RangeSumQuery {
        /* Approach 1 -- 0 indexed. Take each array as it is , just take L R decrement 1 to refer to actual indexes
 
                //create prefix sum array
-                int[] pf = new int[A.length];
+                long[] pf = new long[A.length];
                 pf[0] = A[0]; // since prefix sum for zero remains same as array value
 
                 for(int j = 1; j<A.length; j++){  //TC : O(N)
