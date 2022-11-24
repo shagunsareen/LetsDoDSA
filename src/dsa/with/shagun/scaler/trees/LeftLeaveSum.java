@@ -54,6 +54,6 @@ public class LeftLeaveSum {
         root.right.left = new TreeNode(23);
         root.right.right = new TreeNode(52);
         root.right.right.left = new TreeNode(50);
-        System.out.println(solve(root));
+        //System.out.println(solve(root));
     }
 }
