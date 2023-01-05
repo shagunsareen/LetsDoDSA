@@ -22,8 +22,8 @@ public class TensDigitSorting {
 
         @Override
         public int compare(Integer val1, Integer val2) {
-            Integer firstTensPlace = val1 / 10;
-            Integer secondTensPlace = val2 / 10;
+            Integer firstTensPlace = (val1/10)%10;
+            Integer secondTensPlace = (val2/10)%10;
 
             if (secondTensPlace < firstTensPlace) {// as secondTensPlace is inserted first , hence if it is less it is correct for increasing order
                 return 1;
