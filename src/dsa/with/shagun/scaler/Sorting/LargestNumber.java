@@ -12,8 +12,12 @@ public class LargestNumber {
 
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public static String largestNumber(final int[] A) {
-
-        Integer[] arr = IntStream.of(A).boxed().toArray(Integer[]::new);
+        int n = A.length;
+        if(n==0){
+            return "0";
+        }
+        Integer[] arr = Arrays.stream(A).boxed().toArray(Integer[]::new);
+        //Integer[] arr = IntStream.of(A).boxed().toArray(Integer[]::new);
 
         //we need to sort elements on basis of factors it holds. This can be done with comparator
         Arrays.sort(arr, new myComparator());
