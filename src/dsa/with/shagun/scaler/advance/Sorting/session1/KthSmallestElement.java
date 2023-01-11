@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.Sorting;
+package dsa.with.shagun.scaler.advance.Sorting.session1;
 
 import sun.net.TelnetInputStream;
 

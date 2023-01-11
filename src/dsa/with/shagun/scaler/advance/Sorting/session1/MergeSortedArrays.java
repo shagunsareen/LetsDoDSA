@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.Sorting;
+package dsa.with.shagun.scaler.advance.Sorting.session1;
 
 public class MergeSortedArrays {
     public static void main(String[] args) {
