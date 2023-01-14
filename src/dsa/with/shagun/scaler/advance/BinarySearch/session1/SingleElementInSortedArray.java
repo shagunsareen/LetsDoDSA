@@ -49,6 +49,18 @@ public class SingleElementInSortedArray {
                     r = mid - 1;
                 }
             }
+
+            /*if (A[mid] == A[mid - 1]) { //let's move to 1st occurance of element
+                mid -= 1;
+            }
+            //since 1st occurance of elements on left of unique element is always at even index
+            //check if mid is even index or odd and move accordingly
+            if (mid % 2 == 0) {
+                //means we are at left of mid and we need to go right to meet unique element
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }*/
         }
         return -1;
     }
