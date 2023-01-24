@@ -1,14 +1,18 @@
 package dsa.with.shagun.scaler.advance.TwoPointer;
 
+import java.util.Arrays;
+
 public class ThreeSum {
     public static void main(String[] args) {
         //System.out.println(threeSumClosest(new int[]{-1, 2, 1, -4}, 1));
         //System.out.println(threeSumClosest(new int[]{1, 2, 3}, 6));
-        System.out.println(threeSumClosest(new int[]{
+        /*System.out.println(threeSumClosest(new int[]{
                 -5, 1, 4, -7, 10, -7, 0, 7, 3, 0, -2, -5, -3, -6, 4,
                 -7, -8, 0, 4, 9, 4, 1, -8, -6, -6, 0, -9, 5, 3, -9, -5, -9, 6,
                 3, 8, -10, 1, -2, 2, 1, -9, 2, -3, 9, 9, -10, 0, -9, -2, 7, 0,
                 -4, -3, 1, 6, -3}, -1));
+         */
+        System.out.println(threeSumClosest(new int[]{5,-1,-2,-10,10},5));
     }
 
     public static int threeSumClosest(int[] A, int B) {
@@ -58,6 +62,7 @@ public class ThreeSum {
         //APPROACH : Instead the approach to be used is fix one variable and use 2 pointer for rest of the elements
 
         //TC :O(n2),SC:O(1)
+        Arrays.sort(A);  // this is required since there can be some smaller elements between extreme elements
         long diff = 0;
         long res =0;
         long minDiff = Integer.MAX_VALUE;
