@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.Hashing;
+package dsa.with.shagun.scaler.advance.Hashing.session1;
 
 import java.util.ArrayList;
 import java.util.Collections;
