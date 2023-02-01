@@ -10,22 +10,13 @@ public class StringPalindrome {
     }
 
     public static int solve(String A) {
+        /*Approach 1: Two pointers , TC : O(N), SC:O(1)
+
         int left = 0;
         int size = A.length();
         int right = size - 1;
         int count = 0;
-        /*while (left < right) {
-            if (A.charAt(left) != A.charAt(right)) {
-                count = A.length()-1;
-                return count;
-            } else {
-                left++;
-                right--;
-            }
-        }
-        if (left == right && A.charAt(left) != A.charAt(left - 1)) {
-            count++;
-        }*/
+
         boolean isMatched = false;
         while (left <= right) {
             if (A.charAt(left) != A.charAt(right)) {
@@ -44,5 +35,35 @@ public class StringPalindrome {
             }
         }
         return count;
+         */
+
+        //approach : LPS array
+
+        //Step1 : Concatenate string with special character and reverse of string
+        StringBuilder strBldr = new StringBuilder();
+        strBldr.append(A);
+        strBldr.append("$");
+        strBldr.append(new StringBuilder(A).reverse());
+
+        //Step2 : Generate LPS array of the string
+        int[] lps = new int[strBldr.length()];
+        lps[0] = 0;
+
+        char[] ch = strBldr.toString().toCharArray();
+        for (int i = 1; i < strBldr.length(); i++) {
+            int x = lps[i - 1];
+
+            while (ch[i] != ch[x]) {
+                if (x == 0) {
+                    x = -1;
+                    break;
+                }
+                x = lps[x - 1];
+            }
+
+            lps[i] = x + 1;
+        }
+
+        return A.length() - lps[strBldr.length() - 1];
     }
 }
