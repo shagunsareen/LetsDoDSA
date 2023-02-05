@@ -1,7 +1,5 @@
 package dsa.with.shagun.scaler.advance.LinkedList.session2;
 
-import java.util.List;
-
 public class MiddleEleOfLL {
 
     class ListNode {
@@ -43,6 +41,7 @@ public class MiddleEleOfLL {
         return A.val; // list.size = 1*/
 
 
+        //SINCE IT"S GIVEN IN QUES THAT IF N IS EVEN THEN RETURN (N/2+1)th element hence ,for size==2 we are returning n/2+1 element which is not the same for normal case
         //More readable form of code
         ListNode slow = A;
         ListNode fast = A;
@@ -50,7 +49,7 @@ public class MiddleEleOfLL {
         //For odd no. of elements, fast.next=null
         //For even no. of elements, fast=null
         //return slow.val;
-        while (fast != null || fast.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
