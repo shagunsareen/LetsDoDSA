@@ -22,7 +22,7 @@ public class BalancedParanthesis {
             }
         }
 
-        if (stack.size() != 0) {
+        if (!stack.isEmpty()) {
             return 0;
         }
         return 1;
