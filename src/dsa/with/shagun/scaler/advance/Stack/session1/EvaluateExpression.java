@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.Stack;
+package dsa.with.shagun.scaler.advance.Stack.session1;
 
 import java.util.Objects;
 import java.util.Stack;
