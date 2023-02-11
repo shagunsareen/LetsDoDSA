@@ -91,7 +91,41 @@ public class NearestSmallerElement {
                 ans[i] = stack.peek();
             } else {
                 // if stack top element is greater than curr element iterate till last of stack until we get smaller element
-                while (stack.peek() > A[i]) {
+                while (stack.peek() >= A[i]) {
+                    stack.pop();
+                }
+                ans[i] = stack.peek();
+            }
+
+            //OR since we have to anyways assign -1 to ans if after popping we don't get anything
+            /*while (stack.peek() > A[i]) {
+                stack.pop();
+            }
+            ans[i] = stack.peek();
+            */
+
+            // since our current element can be ans for other elements push it into the stack
+            stack.push(A[i]);
+        }
+
+        return ans;
+    }
+
+    public static int[] prevGreater(int[] A) { // TC : O(N), SC:O(N)
+
+        Stack<Integer> stack = new Stack<>();
+        stack.push(-1);
+
+        int[] ans = new int[A.length];
+
+        for (int i = 0; i < A.length; i++) {
+
+            // if in stack we got the nearest GREATER element then assign it as our ans
+            if (stack.peek() > A[i]) {
+                ans[i] = stack.peek();
+            } else {
+                // if stack top element is greater than curr element iterate till last of stack until we get smaller element
+                while (stack.peek() <= A[i]) {
                     stack.pop();
                 }
                 ans[i] = stack.peek();
