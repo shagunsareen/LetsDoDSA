@@ -18,7 +18,6 @@ public class RedundantBraces {
 
     // ------ REDUNDANT IS WHEN WE HAVE NO OPERATOR WITHIN BRACKETS OR WHEN WE HAVE DUPLICATE BRACKETS ))
     public static int braces(String A) {
-        Stack<Character> stack = new Stack<>();
         int N=A.length();
         Stack<Character> stk=new Stack<>();
 
