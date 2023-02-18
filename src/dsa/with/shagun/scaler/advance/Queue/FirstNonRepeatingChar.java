@@ -4,8 +4,8 @@ import java.util.*;
 
 public class FirstNonRepeatingChar {
     public static void main(String[] args) {
-        System.out.println(solve(new String("abadbc")));
-        System.out.println(solve(new String("abcabc")));
+        System.out.println(solve("abadbc"));
+        System.out.println(solve("abcabc"));
     }
     //TC : O(N), SC:O(N)
     public static String solve(String A) {
