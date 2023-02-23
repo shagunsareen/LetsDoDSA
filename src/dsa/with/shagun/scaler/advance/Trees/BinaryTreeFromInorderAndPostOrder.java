@@ -43,8 +43,11 @@ public class BinaryTreeFromInorderAndPostOrder {
         int indexR = hm.get(root.val);
 
         // Now get LST and RST
-        root.left=constructTree(A, B, 0, indexR-1, inStart, indexR-1);
-        root.right=constructTree(A, B, indexR, postEnd-1, indexR+1, inEnd);
+        /*root.left=constructTree(A, B, 0, indexR-1, inStart, indexR-1);
+        root.right=constructTree(A, B, indexR, postEnd-1, indexR+1, inEnd);*/
+
+        root.left=constructTree(A, B, postStart, indexR-1-postStart, inStart, indexR-1);
+        root.right=constructTree(A, B, indexR-1-postStart+1, postEnd-1, indexR+1, inEnd);
 
         return root;
     }
