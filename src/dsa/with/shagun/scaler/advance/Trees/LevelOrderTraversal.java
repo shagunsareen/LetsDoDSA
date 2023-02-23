@@ -16,7 +16,6 @@ public class LevelOrderTraversal {
             left = null;
             right = null;
         }
-
     }
 
     //Since we need to print children of a node in a particular order,
