@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.Trees;
+package dsa.with.shagun.scaler.advance.Trees.session1;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

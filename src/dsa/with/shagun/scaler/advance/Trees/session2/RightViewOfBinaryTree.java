@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.Trees;
+package dsa.with.shagun.scaler.advance.Trees.session2;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
