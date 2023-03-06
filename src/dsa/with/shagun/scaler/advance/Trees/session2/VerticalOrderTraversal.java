@@ -28,7 +28,7 @@ public class VerticalOrderTraversal {
     }
 
     public ArrayList<ArrayList<Integer>> verticalOrderTraversal(TreeNode A) {
-//Level Order Traversal
+        //Level Order Traversal
         TreeNode curr = A;
         int minVerticalIndex = Integer.MAX_VALUE;
         int maxVerticalIndex = Integer.MIN_VALUE;
