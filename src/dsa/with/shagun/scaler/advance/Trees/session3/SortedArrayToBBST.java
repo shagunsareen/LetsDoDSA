@@ -1,7 +1,5 @@
 package dsa.with.shagun.scaler.advance.Trees.session3;
 
-import dsa.with.shagun.scaler.advance.Trees.session2.IsBalanced;
-
 public class SortedArrayToBBST {
 
     class TreeNode {
