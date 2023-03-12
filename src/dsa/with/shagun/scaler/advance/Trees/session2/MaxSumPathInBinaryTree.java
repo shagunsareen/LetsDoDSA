@@ -1,7 +1,5 @@
 package dsa.with.shagun.scaler.advance.Trees.session2;
 
-import dsa.with.shagun.scaler.advance.Trees.session3.IsValidBST;
-
 public class MaxSumPathInBinaryTree {
     class TreeNode {
         int val;
