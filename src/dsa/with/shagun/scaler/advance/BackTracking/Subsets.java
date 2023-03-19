@@ -60,5 +60,6 @@ public class Subsets {
         //Remove the element from the list
         currList.remove(inputList.get(index));
         getSubset(inputList, N, index+1, currList);
+
     }
 }
