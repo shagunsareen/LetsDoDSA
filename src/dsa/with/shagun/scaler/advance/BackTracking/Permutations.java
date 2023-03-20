@@ -6,7 +6,7 @@ public class Permutations {
     ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
 
     public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> A) {
-        //parameter required are - input array, start index and temp placehoder
+        //parameter required are - input array, start index
         permute(A, 0);
         return res;
     }
@@ -18,9 +18,9 @@ public class Permutations {
             return;
         }
 
-        //lets iterate and get element from next position to index position
+        //For loop is for checking permutations for every element as first element of permutation
+        // Internal recursion is for next elements once one element is fixed i.e. we are using i+1 index to go to next element
         for(int j=start; j<A.size(); j++){
-
             //DO step
             swap(start, j, A);
 
