@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.array;
+package dsa.with.shagun.scaler.array.IntroProblems;
 
 public class GoodPair {
     public int solve(int[] A, int B) {

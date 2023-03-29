@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.array;
+package dsa.with.shagun.scaler.array.IntroProblems;
 
 public class ReverseArray {
     // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY

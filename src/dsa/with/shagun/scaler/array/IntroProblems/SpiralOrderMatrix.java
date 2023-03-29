@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.array;
+package dsa.with.shagun.scaler.array.IntroProblems;
 
 public class SpiralOrderMatrix {//TC : O(N*N), SC: O(1)
     public static void main(String[] args) {
