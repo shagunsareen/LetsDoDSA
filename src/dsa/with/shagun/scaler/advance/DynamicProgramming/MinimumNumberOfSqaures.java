@@ -17,8 +17,36 @@ public class MinimumNumberOfSqaures {
         return count;
     }*/
 
+    //Iterative with dp table
+    //Approach : Iterative with dp table
+    public int countMinSquares(int n) {
+        int[] dp = new int[n + 1];
+
+        // simple base case assignment
+        dp[0] = 0;
+        dp[1] = 1;
+
+        //finding optimal answer for every 2<=i<=N in bottom-up manner
+        for (int i = 2; i <= n; i++) {
+
+            //for i answer will be always less than equal to i.
+            //maximum possible number of squares : i = (1^1+1^1+1^1+.....+1^1, i times)
+            dp[i] = i;
+
+            //Now identify from which number we have to make a direct jump to N so that the required answer is minimised.
+            //do this by considering every possible direct jump
+            //number of iterations will be <= sqrt(i)
+            for (int x = 1; x * x <= i; x++) {
+                dp[i] = Math.min(dp[i], 1 + dp[i - x * x]);
+            }
+        }
+
+        //here we get our optimal answer
+        return dp[n];
+    }
+
     //Approach2 : with dp table , TC : O(N*rootN), SC:O(N+N) N for dp table and N for recursion array
-    int[] dp;
+    /*int[] dp;
     int ans = Integer.MAX_VALUE;
 
     public int countMinSquares(int A){
@@ -47,5 +75,5 @@ public class MinimumNumberOfSqaures {
             dp[A] = ans;
         }
         return dp[A];
-    }
+    }*/
 }
