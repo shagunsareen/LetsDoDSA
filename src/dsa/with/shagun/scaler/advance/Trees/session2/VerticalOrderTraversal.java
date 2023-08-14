@@ -1,7 +1,5 @@
 package dsa.with.shagun.scaler.advance.Trees.session2;
 
-import javafx.util.Pair;
-
 import java.util.*;
 
 public class VerticalOrderTraversal {
