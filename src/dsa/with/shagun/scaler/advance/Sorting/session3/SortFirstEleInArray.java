@@ -29,7 +29,7 @@ public class SortFirstEleInArray {
                 p2--;
             }
         }
-        swap(0, p1 - 1, A);
+        swap(0, p1 - 1, A);  //this is to bring 0th element at the correct position
         return A;
     }
 
