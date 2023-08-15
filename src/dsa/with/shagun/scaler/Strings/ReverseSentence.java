@@ -1,7 +1,5 @@
 package dsa.with.shagun.scaler.Strings;
 
-import netscape.security.UserTarget;
-
 public class ReverseSentence {
     public static void main(String[] args) {
        // System.out.println(solve("scaler_academy_is_the_best"));
