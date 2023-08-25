@@ -44,7 +44,7 @@ public class SortLinkedListWithMergeSort {
         ListNode slow = A;
         ListNode fast = A;
 
-        if (fast.next != null && fast.next.next == null) { // list.size = 2 then return middle element and not (n/2+1)th element
+       /* if (fast.next != null && fast.next.next == null) { // list.size = 2 then return middle element and not (n/2+1)th element
             return slow;
         }
 
@@ -55,7 +55,12 @@ public class SortLinkedListWithMergeSort {
             slow = slow.next;
             fast = fast.next.next;
         }
+        */
 
+        while(fast.next!=null && fast.next.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
         return slow;
     }
 
