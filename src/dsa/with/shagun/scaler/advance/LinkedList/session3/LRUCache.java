@@ -21,7 +21,7 @@ public class LRUCache {
             }
         }
 
-        public Solution(int capacity) {
+        public LRUCache(int capacity) {
             this.limit = capacity;
             hm = new HashMap();
 
@@ -77,5 +77,4 @@ public class LRUCache {
             tail.prev.next = currentNode;
             tail.prev = currentNode;
         }
-    }
 }
