@@ -2,6 +2,7 @@ package dsa.with.shagun.scaler.advance.Queue.Revision;
 
 import java.util.Stack;
 
+//https://leetcode.com/problems/implement-queue-using-stacks/submissions/
 public class ImplementQueuesUsingStack {
     class MyQueue {
 
