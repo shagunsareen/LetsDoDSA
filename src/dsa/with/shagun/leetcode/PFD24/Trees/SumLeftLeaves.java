@@ -1,0 +1,33 @@
+package dsa.with.shagun.leetcode.PFD24.Trees;
+class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+  }
+
+public class SumLeftLeaves {
+    public int sumOfLeftLeaves(TreeNode root) {
+        return getLeftLeavesSum(root, false);
+    }
+
+    private int getLeftLeavesSum(TreeNode root, boolean isLeft) {
+        if (root == null) {
+            return 0;
+        }
+
+        //check for the left leave node
+        if (root.left == null && root.right == null && isLeft) {
+            return root.val;
+        }
+
+        //traverse left node and right node for the root/current node
+        return getLeftLeavesSum(root.left, true) + getLeftLeavesSum(root.right, false);
+    }
+}
