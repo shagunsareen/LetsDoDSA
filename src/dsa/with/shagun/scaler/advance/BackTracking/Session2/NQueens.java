@@ -1,4 +1,4 @@
-package dsa.with.shagun.scaler.advance.BackTracking;
+package dsa.with.shagun.scaler.advance.BackTracking.Session2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
