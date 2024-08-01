@@ -1,6 +1,7 @@
 package dsa.with.shagun.scaler.advance.BackTracking;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class UniquePermutations {
@@ -54,7 +55,7 @@ public class UniquePermutations {
     }*/
 
     //Approach 2
-    ArrayList<ArrayList<Integer>> res = new ArrayList();
+    /*ArrayList<ArrayList<Integer>> res = new ArrayList();
 
     public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> A) {
         //parameter required are - input array, start index
@@ -83,11 +84,52 @@ public class UniquePermutations {
 
             //UNDO step - restore original condition
             swap(j, start, A);
+        }*/
+
+
+    //Approach 3 -- same logic as that of permutation with visited array
+    ArrayList<ArrayList<Integer>> res;
+
+    //Approach 3
+    public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> A) {
+        res = new ArrayList<>();
+        Collections.sort(A);
+        ArrayList<Integer> currList = new ArrayList<>();
+        int n = A.size();
+        //HashSet<Integer> set = new HashSet<>(); can't use set because we can have duplicates
+        boolean[] visited = new boolean[n];
+        permute(res, currList, A, n, visited);
+        return res;
+    }
+
+    private void permute(ArrayList<ArrayList<Integer>> res,
+                         ArrayList<Integer> currList,
+                         ArrayList<Integer> input, int n,
+                         boolean[] visited) {
+        if (currList.size() == n) {
+            res.add(new ArrayList<>(currList));
+            return;
+        }
+
+        //add the current element in the list and check if this is already used don't generate permutations for this again
+        for (int i = 0; i < n; i++) { //this for loop is for the number of places we have to fill
+            if (!visited[i]) { //if we have not used the digit already then use it
+                currList.add(input.get(i));
+                visited[i] = true;
+
+                permute(res, currList, input, n, visited);
+
+                currList.remove(currList.size() - 1);
+                visited[i] = false;
+
+                //skip duplicate elements to avoid generating same permutations
+                while (i < n - 1 && input.get(i) == input.get(i + 1)) i++;
+            }
         }
     }
 
     //swapping list elements
-    private void swap(int src, int dest, ArrayList<Integer> A){
+    private void swap(int src, int dest, ArrayList<Integer> A) {
         int temp = A.get(src);
         A.set(src, A.get(dest));
         A.set(dest, temp);
